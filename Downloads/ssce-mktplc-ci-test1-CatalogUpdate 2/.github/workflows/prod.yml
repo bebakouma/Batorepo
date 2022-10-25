@@ -1,0 +1,23 @@
+name: ssce-mktplc CI-prod
+
+on:
+  push:
+    branches: [ main, demo, AllServices,CatalogUpdate ]
+
+
+jobs:
+  build:
+    runs-on: [ self-hosted, linux, enterprise, ssc-cloud ]  
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2    
+   
+    - name: Login to artifactory 
+      run: docker login -u ${{ secrets.BATO_USER }} -p ${{ secrets.ARTIFACTORY_BATO_API_KEY }} artifacts-ykt.ssnc-corp.cloud
+   
+    - name: Build the Docker image
+      run: docker build -f dockerfile_node -t artifacts-ykt.ssnc-corp.cloud/regulatory-analytics-docker/ssce-marketplace/ssce-ssce-mktplc/prod:ssce-ssce-mktplc-$GITHUB_RUN_NUMBER -t artifacts-ykt.ssnc-corp.cloud/regulatory-analytics-docker/ssce-marketplace/ssce-ssce-mktplc/prod:latest .               
+    
+    - name: Push the docker image
+      run: docker push artifacts-ykt.ssnc-corp.cloud/regulatory-analytics-docker/ssce-marketplace/ssce-ssce-mktplc/dev:ssce-ssce-mktplc-$GITHUB_RUN_NUMBER      
+    - name: push the lates docker image 

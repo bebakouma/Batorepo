@@ -1,0 +1,91 @@
+{
+  "name": "express",
+  "version": "0.0.1.0-SNAPSHOT",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@material-ui/core": "^4.12.4",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/lab": "^5.0.0-alpha.95",
+    "@mui/material": "^5.10.1",
+    "@types/d3": "^7.4.0",
+    "@types/d3-geo": "^3.0.2",
+    "@types/geojson": "^7946.0.10",
+    "@types/topojson-client": "^3.1.1",
+    "@types/typescript": "^2.0.0",
+    "axios": "^0.25.0",
+    "d3": "^7.6.1",
+    "d3-geo": "^3.0.1",
+    "express": "^4.18.1",
+    "geojson": "^0.5.0",
+    "mapbox-gl": "^2.9.2",
+    "notistack": "^2.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-map-gl": "^7.0.19",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "6",
+    "react-uuid": "^1.0.2",
+    "recharts": "^2.1.10",
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1",
+    "topojson-client": "^3.1.0",
+    "uuid": "^8.3.2",
+    "yarn": "^1.22.17"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "iya": "yarn improved-yarn-audit --fail-on-missing-exclusions --ignore-dev-deps",
+    "audit-count": "yarn audit | grep -i 'severity'",
+    "find-circular-deps": "npx madge --circular --extensions .ts,tsx ./"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not ie <= 11",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^16.11.22",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.22",
+    "@types/redux-logger": "^3.0.9",
+    "@types/styled-components": "^5.1.21",
+    "@types/uuid": "^8.3.4",
+    "improved-yarn-audit": "^3.0.0",
+    "msw": "^0.36.8",
+    "react-scripts": "5.0.0",
+    "sass": "^1.49.7",
+    "source-map-explorer": "^2.5.2",
+    "typescript": "^4.4.2"
+  },
+  "main": "index.js",
+  "repository": "https://code.ssnc.dev/ssce/ssce-mktplc.git",
+  "author": "“Ally <“ally.tran@sscinc.com>",
+  "license": "MIT"
+}

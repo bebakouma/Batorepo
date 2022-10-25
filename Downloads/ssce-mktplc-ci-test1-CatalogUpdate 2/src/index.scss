@@ -1,0 +1,67 @@
+main {
+  display: block;
+}
+
+/* Roboto-Regular */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/Roboto/Roboto-Regular.ttf');
+    /* Super Modern Browsers 
+      url('./assets/fonts/Roboto/Roboto-Regular.woff2')
+      format('woff2'),
+     Modern Browsers 
+      url('./assets/fonts/Roboto/Roboto-Regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS 
+      url('./assets/fonts/Roboto/Roboto-Regular.svg') format('svg'); /* Legacy iOS */
+}
+
+/* Source-Sans-Pro-600 - latin 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+    /* Super Modern Browsers 
+      url('./assets/fonts/SourceSansProSemiBold/source-sans-pro-v14-latin-600.woff2')
+      format('woff2'),
+    /* Modern Browsers 
+      url('./assets/fonts/SourceSansProSemiBold/source-sans-pro-v14-latin-600.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS 
+      url('./assets/fonts/SourceSansProSemiBold/source-sans-pro-v14-latin-600.svg') format('svg');  Legacy iOS 
+}
+*/
+// prevent weird blue outline on focusable components in Chrome and Firefox
+div:focus,
+a:focus,
+button:focus,
+input:focus,
+td:focus,
+textarea:focus {
+  outline: none;
+}
+
+body {
+  line-height: 1;
+  background-color: #FAFDFF;
+  color: #02273C;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+code {
+  font-family: 'Roboto', sans-serif;
+  
+  //source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.stadium-app-bar {
+  z-index: 1300;
+  background: #0A85C7;
+  max-height: 56px;
+}
+
